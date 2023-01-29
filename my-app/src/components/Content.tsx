@@ -1,14 +1,11 @@
 import React from "react"
+import Part from "./Parts"
 
 
 const Content = ({data} : {data:any}) : JSX.Element => {
     return(
         <div>
-            {  
-                data.map((n :any) => (
-                    <p>{n.name} {n.exerciseCount}</p>
-                ))  
-            }
+            <Part data={data}></Part>
         </div>
     )
 }
