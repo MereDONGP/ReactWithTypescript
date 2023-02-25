@@ -4,9 +4,6 @@
     exerciseCount: number;
     type: string;
 }
-//   interface courseDescription extends CoursePartBase {
-//     description: string
-// }
 interface CourseNormalPart extends CoursePartDescription {
     type: "normal";
 }
@@ -19,9 +16,15 @@ interface CourseSubmissionPart extends CoursePartDescription{
     exerciseSubmissionLink: string;
 }
 
+interface CourseRequirements extends CoursePartDescription{
+    type: "special";
+    requirements: Array<string>;
+}
+
 interface CoursePartDescription extends CoursePartBase {
   description: string
 }
 
 
-export type CoursePart = CourseNormalPart | CourseProjectPart | CourseSubmissionPart 
+
+export type CoursePart = CourseNormalPart | CourseProjectPart | CourseSubmissionPart | CourseRequirements 

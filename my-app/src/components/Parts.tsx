@@ -15,7 +15,9 @@ const Part = ({data} : {data: Array<CoursePart>}) =>{
                       case "groupProject":
                         return <>
                           <div>{part.name} {part.exerciseCount}</div>
-                          <div>Group Size {part.groupProjectCount}</div>
+                          <div>Group Size 
+                            
+                            {part.groupProjectCount}</div>
                         </>
           
                         case "submission":
@@ -23,6 +25,13 @@ const Part = ({data} : {data: Array<CoursePart>}) =>{
                             <div>{part.name} {part.exerciseCount}</div>
                             <div>{part.description}</div>
                             <div>{part.exerciseSubmissionLink}</div>
+                          </>
+                      
+                        case "special":
+                          return <>
+                            <div>{part.name} {part.exerciseCount}</div>
+                            <div>{part.description}</div>
+                            <div>{part.requirements}</div>
                           </>
 
                           default:
