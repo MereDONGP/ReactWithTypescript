@@ -31,7 +31,7 @@ const Part = ({data} : {data: Array<CoursePart>}) =>{
                           return <>
                             <div>{part.name} {part.exerciseCount}</div>
                             <div>{part.description}</div>
-                            <div>{part.requirements}</div>
+                            <div>{part.requirements.join(", ")}</div>
                           </>
 
                           default:
